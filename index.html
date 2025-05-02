@@ -32,21 +32,21 @@
         <form class="eid-form" id="detailsForm">
           <div class="form-group">
             <input type="text" id="senderName" required>
-            <label for="senderName">Nickname of Sender</label>
+            <label for="senderName">Sender <span><small>(Your Nick.)</small></span></label>
             <span class="bar"></span>
           </div>
           
           <div class="form-group">
             <input type="text" id="recipientName" required>
-            <label for="recipientName">Nickname of Receiver</label>
+            <label for="recipientName">Receiver <span><small>(Receiver's Nick.)</small></span></label>
             <span class="bar"></span>
           </div>
           
           <div class="form-group">
-            <textarea id="message" required maxlength="600"></textarea>
-            <label for="message">Letter Body</label>
+            <textarea id="message" required maxlength="900"></textarea>
+            <label for="message">Letter Body <span><small>(Your Eid Wish.)</small></span></label>
             <span class="bar"></span>
-            <div class="char-counter"><span id="charCount">0</span>/600</div>
+            <div class="char-counter"><span id="charCount">0</span>/900</div>
           </div>
           
           <button type="button" class="btn-next" id="nextToDesign">Next <i class="fas fa-arrow-right"></i></button>
@@ -100,20 +100,28 @@
             </div>
             
             <div class="payment-section">
-                <h3>Add Eidi (Optional)</h3>
+              <h3>Add Number <span>(one or both)</span></h3>
                 <div class="payment-options">
                 <div class="form-group">
                     <input type="tel" id="bkashNumber" pattern="[0-9]{11}" maxlength="11">
                     <label for="bkashNumber">bKash Number</label>
                     <span class="bar"></span>
-                    <div class="payment-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="payment-icon">
+                      <i>
+                        <img src="assets/ico/bkash.svg" alt="">
+                      </i>
+                    </div>
                 </div>
                 
                 <div class="form-group">
                     <input type="tel" id="nagadNumber" pattern="[0-9]{11}" maxlength="11">
                     <label for="nagadNumber">Nagad Number</label>
                     <span class="bar"></span>
-                    <div class="payment-icon"><i class="fas fa-wallet"></i></div>
+                    <div class="payment-icon">
+                      <i>
+                        <img src="assets/ico/nagad.svg" alt="">
+                      </i>
+                    </div>
                 </div>
                 </div>
             </div>
@@ -202,10 +210,10 @@
             
             <div class="emoji-background">
             <span>🌙</span>
-            <span>🕌</span>
+            <span>🎆</span>
             <span>🌟</span>
             <span>🦋</span>
-            <span>🌠</span>
+            <span>🎠</span>
             </div>
         </section>
     </main>

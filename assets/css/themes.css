@@ -1,13 +1,15 @@
 /* Color Variables */
 :root {
     --moonlight-lilac: #DCCEF9;
-    --eid-gold: #F6C90E;
+    --eid-gold: #060080;
+    --check:  #b1021c;
     --mint-mist: #D8F3DC;
     --blush-rose: #FAD2E1;
     --deep-plum: #6247AA;
     --sky-dream-blue: #A3D8F4;
     --pure-white: #FFFFFF;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
   
   /* Glassmorphism Effect */
   .glass-card {

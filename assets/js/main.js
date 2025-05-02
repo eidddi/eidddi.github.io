@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function shareOnPlatform() {
       const platform = this.dataset.platform;
       const url = encodeURIComponent(generatedLink.value);
-      const text = encodeURIComponent(`Eid Mubarak! ${cardData.sender} sent you a beautiful Eid card.`);
+      const text = encodeURIComponent(`Eid Mubarak ${cardData.recipient}! Check it out.😉`);
       
       let shareUrl = '';
       
@@ -368,8 +368,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function nativeShare() {
       navigator.share({
-        title: 'Eid Mubarak Card',
-        text: `${cardData.sender} sent you a beautiful Eid card!`,
+        title: 'Eid Card',
+        text: `Hey ${cardData.recipient}, Check it😗`,
         url: generatedLink.value
       }).catch(err => {
         console.log('Error sharing:', err);
