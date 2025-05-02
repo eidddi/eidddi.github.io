@@ -9,7 +9,20 @@
     --sky-dream-blue: #A3D8F4;
     --pure-white: #FFFFFF;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Fleur+De+Leah&display=swap'); 
+  @font-face {
+    font-family: 'Typewriter';
+    src: url('/assets/fonts/typewriter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'head';
+    src: url('/assets/fonts/TheBencolenVintage.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   
   /* Glassmorphism Effect */
   .glass-card {

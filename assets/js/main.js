@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Use style in the path instead of query string
       const stylePath = cardData.style || 'random';
-      const longUrl = `${baseUrl.replace(/\/$/, '')}/${stylePath}/?${params.toString()}`;
+      const longUrl = `${baseUrl.replace(/\/$/, '')}/pages/${stylePath}/?${params.toString()}`;
 
       
       // Display the actual long URL
