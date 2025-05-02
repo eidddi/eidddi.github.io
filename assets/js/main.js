@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
       decorations.className = 'card-decorations';
       decorations.innerHTML = `
         <div class="moon">🌙</div>
-        <div class="lantern">🪔</div>
+        <div class="lantern">🦋</div>
         <div class="stars">${Array(5).fill('⭐').join('')}</div>
       `;
       cardContent.appendChild(decorations);
@@ -199,22 +199,21 @@ document.addEventListener('DOMContentLoaded', function() {
       // Create base URL
       const baseUrl = window.location.href.split('?')[0];
       
-      // Create URL parameters with all card data
-      const params = new URLSearchParams();
-      
       // Preserve line breaks in message by replacing with \n before encoding
       const formattedMessage = cardData.message.replace(/\r?\n/g, '\n');
-      
+
+      const params = new URLSearchParams();
       params.append('sender', encodeURIComponent(cardData.sender));
       params.append('recipient', encodeURIComponent(cardData.recipient));
       params.append('message', encodeURIComponent(formattedMessage));
-      params.append('style', cardData.style);
-      
+
       if (cardData.bkash) params.append('bkash', cardData.bkash);
       if (cardData.nagad) params.append('nagad', cardData.nagad);
-      
-      // Generate the full long URL
-      const longUrl = `${baseUrl}?${params.toString()}`;
+
+      // Use style in the path instead of query string
+      const stylePath = cardData.style || 'random';
+      const longUrl = `${baseUrl.replace(/\/$/, '')}/${stylePath}/?${params.toString()}`;
+
       
       // Display the actual long URL
       generatedLink.value = longUrl;
