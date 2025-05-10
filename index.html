@@ -32,21 +32,21 @@
         <form class="eid-form" id="detailsForm">
           <div class="form-group">
             <input type="text" id="senderName" required>
-            <label for="senderName">Sender <span><small>(Your Nick.)</small></span></label>
+            <label for="senderName">Sender <span><small>(Hey ___.)</small></span></label>
             <span class="bar"></span>
           </div>
           
           <div class="form-group">
             <input type="text" id="recipientName" required>
-            <label for="recipientName">Receiver <span><small>(Receiver's Nick.)</small></span></label>
+            <label for="recipientName">Receiver <span><small>(Yours ___.)</small></span></label>
             <span class="bar"></span>
           </div>
           
           <div class="form-group">
-            <textarea id="message" required maxlength="900"></textarea>
-            <label for="message">Letter Body <span><small>(Your Eid Wish.)</small></span></label>
+            <textarea id="message" required maxlength="550"></textarea>
+            <label for="message">Letter Body <span><small>(Eid Mubarak, ___)</small></span></label>
             <span class="bar"></span>
-            <div class="char-counter"><span id="charCount">0</span>/900</div>
+            <div class="char-counter"><span id="charCount">0</span>/550</div>
           </div>
           
           <button type="button" class="btn-next" id="nextToDesign">Next <i class="fas fa-arrow-right"></i></button>
@@ -104,7 +104,7 @@
                 <div class="payment-options">
                 <div class="form-group">
                     <input type="tel" id="bkashNumber" pattern="[0-9]{11}" maxlength="11">
-                    <label for="bkashNumber">bKash Number</label>
+                    <label for="bkashNumber">BKash Number</label>
                     <span class="bar"></span>
                     <div class="payment-icon">
                       <i>
@@ -131,7 +131,7 @@
                 <i class="fas fa-arrow-left"></i> Previous
                 </button>
                 <button type="button" class="btn-next" id="generateCard">
-                Generate Card <i class="fas fa-magic"></i>
+                Generate <i class="fas fa-magic"></i>
                 </button>
             </div>
             </div>
@@ -155,7 +155,7 @@
             
             <div class="celebration-container">
             <div class="success-animation">
-                <div class="checkmark">✓</div>
+                <div class="checkmark"><i class="fa-solid fa-star"></i></div>
                 <div class="stars-celebration">
                 <div class="star"></div>
                 <div class="star"></div>
