@@ -26,61 +26,6 @@ body {
     overflow-x: hidden;
 }
 
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #f0c380;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    transition: opacity 0.8s ease;
-}
-
-.loading-screen.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.moon-loader {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px rgba(30, 30, 30, 0.4), 0 0 0 20px rgba(0, 0, 0, 0.43), 0 0 0 30px rgba(57, 57, 57, 0.58);
-    animation: pulse 1.5s infinite alternate;
-}
-
-@keyframes pulse {
-    0% { transform: scale(0.8); opacity: 0.5; }
-    100% { transform: scale(1.2); opacity: 1; }
-}
-
-.swiper-container {
-    width: var(--card-width);
-    height: var(--card-height);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transform: scale(0.9);
-    transition: all 0.8s ease;
-}
-
-.swiper-container.loaded {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.swiper-slide {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
 /* Video Card */
 .video-card {
     background: url(fallback.gif);
