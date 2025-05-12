@@ -18,10 +18,13 @@
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <!-- Video Card -->
             <div class="swiper-slide video-card">
-                <video src="assets/video.mp4" autoplay muted loop playsinline oncontextmenu="return false" preload="auto"></video>
-                <div class="swipe-hint">← Swipe</div>
+<!--
+                <video id="myVideo" muted autoplay playsinline loop oncontextmenu="return false" preload="auto">
+                    <source src="assets/video.mp4" type="video/mp4">
+                </video>
+                <img id="fallbackGif" src="assets/fallback.gif" style="display: none;" alt="Fallback animation"> 
+-->                <div class="swipe-hint">← Swipe</div>
             </div>
 
             <!-- Letter Card -->
@@ -77,5 +80,19 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="assets/confetti.js"></script>
     <script src="assets/script.js"></script>
+    <script>
+            const video = document.getElementById('myVideo');
+            const gif = document.getElementById('fallbackGif');
+
+            // If video can't be loaded or played
+            function showGifFallback() {
+                video.style.display = 'none';
+                gif.style.display = 'block';
+            }
+
+            // Extra check: fallback if video fails to start
+            video.addEventListener('error', showGifFallback);
+            video.addEventListener('stalled', showGifFallback);
+    </script>
 </body>
 </html>
