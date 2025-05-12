@@ -110,15 +110,17 @@ body {
   position: relative;
   margin-bottom: 2rem;
 }
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .form-group input,
 .form-group textarea {
   width: 100%;
+  text-transform: capitalize;
   padding: 10px 0;
   font-size: 1rem;
   color: #000000;
-  font-family: "Fleur De Leah", cursive;
-  font-weight: 400;
+  font-family: "PT Serif", serif;
+  font-weight: 700;
   font-style: normal;
   letter-spacing: 0.1em;
   font-weight: 100;
@@ -126,6 +128,11 @@ body {
   border-bottom: 1px solid #A3D8F4;
   outline: none;
   background: transparent;
+}
+
+.ltr input,
+.ltr textarea{
+  text-transform: none;
 }
 
 .form-group textarea {
