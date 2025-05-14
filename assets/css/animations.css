@@ -96,3 +96,16 @@
     50% { opacity: 1; }
     100% { opacity: 0.3; }
   }
+
+
+  .payment-section {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.payment-section.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

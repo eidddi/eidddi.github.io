@@ -18,13 +18,38 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #adadad, #d4d4d4);
+    background: linear-gradient(135deg, #854053, #6e293f);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
 }
+
+.swiper-container {
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s ease;
+}
+
+.swiper-container.loaded {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
 
 /* Video Card */
 .video-card {
@@ -106,18 +131,19 @@ body {
 
 /* Payment Card */
 .payment-card {
-    background: linear-gradient(45deg, #1a1a1a, #595959, #232120);
+    background: linear-gradient(45deg, #712237, #471a29);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .payment-content {
     width: 90%;
     height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;;
     align-items: center;
     text-align: center;
 }
@@ -127,6 +153,10 @@ body {
     margin-bottom: 30px;
     color: var(--light);
     text-shadow: 0 2px 5px rgb(0 0 0 / 74%);
+}
+.payment-content h4{
+    color:whitesmoke;
+    font-family: "Baloo Da 2", sans-serif;
 }
 
 .payment-options {
@@ -141,6 +171,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 20px;
+    color: bisque;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: var(--transition);
@@ -176,7 +207,7 @@ body {
 .send-button {
     display: inline-block;
     padding: 12px 35px;
-    background: linear-gradient(to right, #000000, #5d5d5d);
+    background: linear-gradient(to right, #000000, #6e293f);
     color: white;
     text-decoration: none;
     border-radius: 50px;
@@ -190,7 +221,7 @@ body {
 
 .send-button:hover {
     transform: translateY(-3px);
-    background: linear-gradient(to left, #000000, #5d5d5d);
+    background: linear-gradient(to left, #000000, #6e293f);
     box-shadow: none;
 }
 
@@ -199,7 +230,7 @@ body {
 }
 
 .contact-link {
-    color: rgb(255 255 255 / 92%);
+    color: rgb(255 255 255 / 54%);
     text-decoration: none;
     font-size: 0.8rem;
     margin-bottom: 8px;
@@ -299,7 +330,7 @@ body {
 
 .copy-btn {
     padding: 10px 15px;
-    background: linear-gradient(45deg, #000000, #5d5d5d);
+    background: linear-gradient(45deg, #742f44, #491b2a, #742f44);
     color: ghostwhite;
     border: none;
     border-radius: 0 8px 8px 0;
@@ -309,7 +340,7 @@ body {
 }
 
 .copy-btn:hover {
-    background: #000000;
+    background: linear-gradient(45deg,  #491b2a, #742f44, #491b2a);
 }
 
 /* Mobile-specific adjustments */
@@ -347,11 +378,3 @@ body {
       pointer-events: none; /* Allow clicks through canvas */
       z-index: 0; /* Behind content */
     }
-
-.payment-content #bkash-option h4 {
-    color: #9e1638;
-}
-
-.payment-content #nagad-option h4 {
-    color: #f69220;
-}

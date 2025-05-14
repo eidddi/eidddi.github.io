@@ -86,6 +86,10 @@
             <div class="design-container glass-card">
             <h3>Choose a Style</h3>
             <div class="card-styles">
+                <button type="button" class="style-option" data-style="random">
+                <i class="fas fa-random"></i>
+                <span>Random</span>
+                </button>
                 <button type="button" class="style-option" data-style="classic">
                 <i class="fas fa-mosque"></i>
                 <span>Classic</span>
@@ -105,10 +109,6 @@
                 <button type="button" class="style-option" data-style="elegant">
                 <i class="fas fa-gem"></i>
                 <span>Elegant</span>
-                </button>
-                <button type="button" class="style-option" data-style="random">
-                <i class="fas fa-random"></i>
-                <span>Random</span>
                 </button>
             </div>
             
@@ -237,5 +237,22 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <script>
+  const styleButtons = document.querySelectorAll('.style-option');
+  const paymentSection = document.querySelector('.payment-section');
+
+  styleButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedStyle = button.getAttribute('data-style');
+
+      if (selectedStyle === 'elegant') {
+        paymentSection.style.display = 'none';
+      } else {
+        paymentSection.style.display = 'block';
+      }
+    });
+  });
+</script>
+
 </body>
 </html>

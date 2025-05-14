@@ -543,10 +543,10 @@ body {
 
 /* Dynamic card styles will be added by JavaScript */
 .card-preview.classic { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
-.card-preview.modern { background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); }
-.card-preview.islamic { background: linear-gradient(to top, #0f2027, #203a43, #2c5364); color: white; }
+.card-preview.modern {background: linear-gradient(to right, #bcb9f9 0%, #9d91fb 100%);color: black;}
+.card-preview.islamic { background: linear-gradient(to top, #271e0f, #73590f, #c59b00); color: white; }
 .card-preview.fun { background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
-.card-preview.elegant { background: linear-gradient(to right, #e6dada, #274046); color: white; }
+.card-preview.elegant {background: linear-gradient(to right, #ff4700, #d58567);color: white;}
 
 .share-container {
   padding: 2rem;

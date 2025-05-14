@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         cardPreview.classList.add(cardData.style);
       } else {
         // For random style, pick one from available options
-        const styles = ['classic', 'modern', 'islamic', 'fun', 'elegant'];
+        const styles = ['classic', 'modern', 'islamic', 'fun'];
         const randomStyle = styles[Math.floor(Math.random() * styles.length)];
         cardPreview.classList.add(randomStyle);
         cardData.style = randomStyle; // Update the selected style
